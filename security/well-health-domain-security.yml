@@ -1,0 +1,27 @@
+generated: '2026-07-24'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: well.company
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  1 01:42:18 2026 GMT
+  hsts: false
+- host: apps.health
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 15 05:02:29 2026 GMT
+  hsts: false
+domains:
+- domain: well.company
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: apps.health
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

@@ -1,0 +1,42 @@
+generated: '2026-07-24'
+method: searched
+source: https://apps.health/how-to-get-your-product-on-apps-health/
+note: >-
+  WELL Health does not publish an OpenAPI or FHIR CapabilityStatement, so
+  conformance is asserted from the documented apps.health integration process
+  rather than derived from a machine-readable spec. The FHIR integration surface
+  is gated behind a partner/contact + conformance-testing process.
+standards:
+- id: fhir
+  conforms: true
+  evidence: >-
+    apps.health docs — "Almost all app partners begin by integrating with OSCAR
+    Pro as it has an open FHIR-based API and SMART on FHIR infrastructure."
+- id: smart-on-fhir
+  conforms: true
+  evidence: >-
+    apps.health docs — OSCAR Pro exposes "SMART on FHIR infrastructure" / a
+    "SMART on FHIR HL7 API" for secure integration of custom applications.
+- id: hl7
+  conforms: true
+  evidence: >-
+    WELL EMRs (OSCAR Pro, Profile) support HL7 FHIR for EMR interoperability
+    (apis.yml description; apps.health developer materials).
+- id: ca-core-fhir
+  conforms: false
+  evidence: >-
+    No published CapabilityStatement or claim of Canada Health Infoway CA Core /
+    CA Baseline conformance; Canadian pan-Canadian FHIR alignment is
+    contextually relevant but not asserted by WELL.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    SMART on FHIR implies OAuth2 authorization, but WELL publishes no OAuth
+    authorization-server metadata or securityScheme; auth details are shared
+    only with vetted partners.
+- id: rfc9457-problem-details
+  conforms: false
+- id: odata
+  conforms: false
+- id: scim
+  conforms: false

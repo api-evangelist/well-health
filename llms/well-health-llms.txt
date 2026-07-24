@@ -1,0 +1,21 @@
+# WELL Health Technologies
+
+> WELL Health Technologies Corp (TSX: WELL, OTCQX: WHTCF) is a Vancouver, Canada-based healthcare technology company — Canada's largest outpatient medical clinic owner-operator and a leading digital health service provider. Its programmatic surface is the apps.health marketplace, through which third-party digital health apps integrate with WELL's network of EMRs (OSCAR Pro, Profile) using HL7 FHIR and SMART on FHIR. There is no self-serve public developer portal, sandbox, OpenAPI, or FHIR CapabilityStatement; integration is gated behind a partner/contact and conformance-testing process.
+
+## Integration
+- [apps.health for Developers](https://apps.health/for-developers): partner intake form and overview of the EMR integration program.
+- [How to get your product on apps.health](https://apps.health/how-to-get-your-product-on-apps-health/): the full integration process — discovery, developer documentation, conformance testing, privacy & security review, partner agreement, marketplace profile.
+- Integration standard: OSCAR Pro exposes an open FHIR-based API and SMART on FHIR HL7 infrastructure. FHIR reference: https://www.hl7.org/fhir/overview.html
+
+## Company
+- [WELL Health](https://well.company/): corporate site.
+- [WELL Health Blog](https://well.company/blog): company news and updates.
+- [Contact / Support](https://well.company/contact/)
+
+## Legal
+- [Privacy Policy](https://well.company/privacy-policy/)
+- [apps.health Terms](https://apps.health/terms)
+
+## Notes for agents
+- No public OpenAPI, GraphQL, MCP server, or FHIR metadata endpoint is available (all probed paths return 404). API access requires becoming a vetted apps.health partner.
+- Supported EMRs: OSCAR Pro, Profile. Reach: 2,000+ clinics and 10,000+ healthcare professionals across Canada.

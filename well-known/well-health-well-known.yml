@@ -1,0 +1,35 @@
+generated: '2026-07-24'
+method: searched
+note: >-
+  Probed the /.well-known/ discovery surface on both public hosts. No documents
+  are published — every path returns 404. Recorded for auditability; no
+  WellKnown/SecurityTxt pointer is wired because nothing was found.
+hosts:
+- host: https://apps.health
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://well.company
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

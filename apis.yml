@@ -34,6 +34,7 @@ tags:
 - Clinics
 created: '2026-07-24'
 modified: '2026-07-24'
+enriched: '2026-07-24'
 specificationVersion: '0.19'
 apis:
 - aid: well-health:apps-health-integration
@@ -61,12 +62,20 @@ apis:
   - type: Website
     url: https://apps.health/
 common:
+- type: DomainSecurity
+  url: security/well-health-domain-security.yml
 - type: Website
   url: https://well.company/
 - type: DeveloperPortal
   url: https://apps.health/for-developers
 - type: Documentation
   url: https://apps.health/for-developers
+- type: GettingStarted
+  url: https://apps.health/how-to-get-your-product-on-apps-health/
+- type: Conformance
+  url: conformance/well-health-conformance.yml
+- type: LLMsTxt
+  url: llms/well-health-llms.txt
 - type: Blog
   url: https://well.company/blog
 - type: PrivacyPolicy
