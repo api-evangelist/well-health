@@ -1,0 +1,130 @@
+aid: well-health
+name: WELL Health Technologies
+review:
+  question: Does WELL Health Technologies expose a documented, self-serve public API or FHIR CapabilityStatement?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+findings:
+  summary: |
+    WELL Health Technologies (TSX: WELL) is a Vancouver, Canada healthcare
+    technology company and Canada's largest outpatient clinic owner-operator,
+    with a practitioner-enablement platform (OSCAR Pro EMR, Profile, billing,
+    eReferral, booking, ePharma) serving 44,000+ providers. Its programmatic
+    surface is the apps.health marketplace, through which third-party digital
+    health apps integrate with WELL's EMR network using HL7 FHIR and other
+    interoperability standards. The integration is real and FHIR-based, but it
+    is GATED: developers submit a solution via a developer contact form and WELL
+    supports the integration to its network of 2,000+ clinics. There is NO
+    self-serve public developer portal, NO published OpenAPI/Swagger, NO FHIR
+    CapabilityStatement (/metadata), and NO SMART-on-FHIR .well-known
+    configuration served on the public hosts probed. No machine-readable API
+    contract could be harvested; this profile is captured as identity + an
+    honest gated-FHIR-marketplace API entry.
+  homeMarket: Canada
+  developerPortal:
+    url: https://apps.health/for-developers
+    httpStatus: 200
+    selfServe: false
+    note: >-
+      Marketplace developer page. Integration is gated behind a "Get Started"
+      developer contact form ("If your solution requires integration, WELL can
+      support your integration to our network of EMRs"). No API docs, base URL,
+      keys, or sandbox are exposed to anonymous developers.
+  fhirCapabilityStatement:
+    captured: false
+    fhirVersion: unknown
+    resources: []
+    note: >-
+      apps.health documents that OSCAR Pro supports HL7 FHIR for EMR
+      interoperability, but no public FHIR base URL is published and no
+      CapabilityStatement/metadata could be retrieved. OSCAR Pro EMR is deployed
+      as per-clinic instances rather than a single public FHIR endpoint.
+  downloadableSpecs:
+    count: 0
+    provenance: []
+    note: No OpenAPI, Swagger, or FHIR CapabilityStatement JSON was found or harvested.
+  authModel:
+    scheme: undocumented-gated
+    smartOnFhir: false
+    note: >-
+      No public auth documentation. FHIR integrations to OSCAR-family EMRs are
+      arranged per-partner. /.well-known/smart-configuration and
+      /.well-known/openid-configuration on apps.health returned 404.
+  standardsConformance:
+    fhir: mentioned (OSCAR Pro EMR interoperability; version unspecified)
+    usCore: not-documented
+    ukCore: not-documented
+    auCore: not-documented
+    caCore: >-
+      Canadian market; Canada Health Infoway stewards pan-Canadian FHIR (CA Core
+      / CA Baseline), but no conformance claim is published by WELL.
+    daVinci: not-documented
+    carin: not-documented
+  access: gated
+  transports:
+    - protocol: FHIR/REST
+      scheme: https
+      documented: partial
+      note: >-
+        OSCAR Pro EMR supports HL7 FHIR per apps.health; no public base URL or
+        endpoint list is documented. Integration arranged per-partner.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface documented.
+  probes:
+    - url: https://well.company/
+      httpStatus: 200
+      note: Corporate site (company identity, investor info).
+    - url: https://apps.health/
+      httpStatus: 200
+      note: Digital health marketplace homepage.
+    - url: https://apps.health/for-developers
+      httpStatus: 200
+      note: Developer/integration page — gated contact form; FHIR via OSCAR Pro.
+    - url: https://apps.health/.well-known/smart-configuration
+      httpStatus: 404
+      note: No SMART-on-FHIR configuration served.
+    - url: https://apps.health/.well-known/openid-configuration
+      httpStatus: 404
+      note: No OpenID configuration served.
+    - url: https://developer.well.company/
+      httpStatus: 000
+      note: No developer subdomain (DNS/connection failure).
+    - url: https://api.well.company/
+      httpStatus: 000
+      note: No api subdomain (DNS/connection failure).
+    - url: https://fhir.apps.health/
+      httpStatus: 000
+      note: No FHIR subdomain (DNS/connection failure).
+    - url: https://apps.health/terms
+      httpStatus: 200
+      note: Terms of service.
+    - url: https://well.company/privacy-policy/
+      httpStatus: 200
+      note: Privacy policy.
+sources:
+  - url: https://apps.health/for-developers
+    type: DeveloperPortal
+    note: FHIR-based EMR integration offered to vetted partners via contact form; no self-serve API.
+  - url: https://apps.health/
+    type: Website
+    note: apps.health digital health marketplace for WELL's EMR network.
+  - url: https://well.company/
+    type: Website
+    note: 'WELL Health Technologies corporate site; TSX: WELL; Vancouver, Canada.'
+  - url: https://news-releases.well.company/news-releases/well-health-advances-digital-health-interoperability-for-appshealth-and-its-global-emr-business-with-adoption-of-fast-healthcare-interoperability-resources-or-fhir-standard/
+    type: PressRelease
+    note: WELL announces FHIR adoption for apps.health and its EMR business.
+actions:
+  apisYmlUpdated: true
+  reason: >-
+    No public OpenAPI or FHIR CapabilityStatement exists to harvest. apis.yml
+    catalogs company identity plus one honest, gated apps.health FHIR EMR
+    integration entry. Bootstrap result: built-stub (identity + documented but
+    gated FHIR integration, no self-serve public API).
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

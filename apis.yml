@@ -1,0 +1,80 @@
+aid: well-health
+url: https://raw.githubusercontent.com/api-evangelist/well-health/refs/heads/main/apis.yml
+name: WELL Health Technologies
+kind: company
+description: >-
+  WELL Health Technologies Corp (TSX: WELL, OTCQX: WHTCF) is a Vancouver,
+  Canada-headquartered healthcare technology company that is Canada's largest
+  outpatient medical clinic owner-operator and a leading multi-disciplinary
+  digital health service provider. It runs two synergistic channels: an
+  omni-channel patient services business operating 115+ multidisciplinary
+  clinics across Canada plus US telehealth and anesthesia operations, and a
+  virtual-services / practitioner-enablement platform serving 44,000+ providers
+  through the OSCAR Pro EMR, billing and revenue-cycle tools, eReferral, digital
+  booking, and ePharma. Its programmatic surface is the apps.health marketplace,
+  through which third-party digital health apps integrate with WELL's network of
+  EMRs (OSCAR Pro, Profile) using HL7 FHIR and other interoperability standards.
+  As of this review WELL exposes no self-serve public developer portal, sandbox,
+  OpenAPI, or FHIR CapabilityStatement; integration is FHIR-based but gated
+  behind a partner/contact process. Home market is Canada, positioned in a
+  province-fragmented healthcare landscape coordinated federally by Canada Health
+  Infoway's pan-Canadian FHIR (CA Core / CA Baseline) specifications.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Canada
+- EMR
+- EHR
+- FHIR
+- HL7
+- Interoperability
+- Digital Health
+- Telehealth
+- ePharma
+- Clinics
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis:
+- aid: well-health:apps-health-integration
+  name: apps.health EMR Integration (FHIR)
+  description: >-
+    apps.health is WELL Health's digital health marketplace through which
+    third-party apps and services integrate with WELL's network of EMRs (OSCAR
+    Pro, Profile), which support HL7 FHIR and other interoperability standards.
+    Integration is offered to vetted partners: developers submit their solution
+    via a developer contact form and WELL supports the integration to its EMR
+    network reaching 2,000+ clinics and 10,000+ healthcare professionals across
+    Canada. No self-serve public API documentation, base URL, sandbox, or FHIR
+    CapabilityStatement is published; the FHIR integration surface is gated
+    behind a partner/contact process.
+  humanURL: https://apps.health/for-developers
+  tags:
+  - Healthcare
+  - FHIR
+  - EMR
+  - Interoperability
+  - Canada
+  properties:
+  - type: Documentation
+    url: https://apps.health/for-developers
+  - type: Website
+    url: https://apps.health/
+common:
+- type: Website
+  url: https://well.company/
+- type: DeveloperPortal
+  url: https://apps.health/for-developers
+- type: Documentation
+  url: https://apps.health/for-developers
+- type: Blog
+  url: https://well.company/blog
+- type: PrivacyPolicy
+  url: https://well.company/privacy-policy/
+- type: TermsOfService
+  url: https://apps.health/terms
+- type: Support
+  url: https://well.company/contact/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
