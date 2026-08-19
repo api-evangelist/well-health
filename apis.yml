@@ -35,7 +35,7 @@ tags:
 created: '2026-07-24'
 modified: '2026-07-24'
 enriched: '2026-07-24'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: well-health:apps-health-integration
   name: apps.health EMR Integration (FHIR)
