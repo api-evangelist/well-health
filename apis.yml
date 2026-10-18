@@ -46,6 +46,17 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.j
 tags:
 - Healthcare
 - Canada
+- Electronic Health Records
+- FHIR
+- HL7
+- Interoperability
+- Digital Health
+- Telehealth
+- ePharma
+- Clinics
+tags_raw:
+- Healthcare
+- Canada
 - EMR
 - EHR
 - FHIR
@@ -74,6 +85,12 @@ apis:
     behind a partner/contact process.
   humanURL: https://apps.health/for-developers
   tags:
+  - Healthcare
+  - FHIR
+  - Electronic Health Records
+  - Interoperability
+  - Canada
+  tags_raw:
   - Healthcare
   - FHIR
   - EMR
